@@ -119,3 +119,13 @@ UCI Machine Learning Repository – [Bank Marketing](https://archive.ics.uci.edu
 2. Установите зависимости `pip install -r requirements.txt`
 3. Запустите Jupyter Notebook в `notebooks/`
 
+
+---
+
+## 💼 Контактная информация
+Если вы хотите обсудить различные задачи, запросы или проекты, предложить кейс или сотрудничество — обязательно напишите мне!
+
+- 📫 [t.me/marashot96](https://t.me/marashot96)
+- 🌐 [marashot96@ya.ru](mailto:marashot96@ya.ru)
+
+<div align="center">  <a href="https://github.com/marashot96/portfolio/blob/main/README.md#--маргарян-ашот---портфолио-"> Обо мне </a> </div>
