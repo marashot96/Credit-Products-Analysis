@@ -32,7 +32,7 @@ erDiagram
 
     CLIENT {
         int client_id PK
-        string birth_number
+        int birth_number
         int district_id FK
     }
 
@@ -40,26 +40,26 @@ erDiagram
         int district_id PK
         string A2
         string A3
-        string A4
-        string A5
-        string A6
-        string A7
-        string A8
-        string A9
-        string A10
-        string A11
-        string A12
-        string A13
-        string A14
-        string A15
-        string A16
+        int A4
+        int A5
+        int A6
+        int A7
+        int A8
+        int A9
+        int A10
+        int A11
+        decimal A12
+        decimal A13
+        int A14
+        int A15
+        int A16
     }
 
     ACCOUNT {
         int account_id PK
         int district_id FK
         string frequency
-        date date
+        int date
     }
 
     DISP {
@@ -73,16 +73,16 @@ erDiagram
         int card_id PK
         int disp_id FK
         string type
-        date issued
+        string issued
     }
 
     LOAN {
         int loan_id PK
         int account_id FK
-        date date
-        float amount
+        int date
+        int amount
         int duration
-        float payments
+        decimal payments
         string status
     }
 
@@ -90,22 +90,22 @@ erDiagram
         int order_id PK
         int account_id FK
         string bank_to
-        string account_to
-        float amount
+        int account_to
+        decimal amount
         string k_symbol
     }
 
     TRANS {
         int trans_id PK
         int account_id FK
-        date date
+        int date
         string type
         string operation
-        float amount
-        float balance
+        decimal amount
+        decimal balance
         string k_symbol
         string bank
-        string account
+        int account
     }
 ```
 
