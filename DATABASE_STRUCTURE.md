@@ -1,14 +1,14 @@
 ```mermaid
 erDiagram
 
-    CLIENT_client_id ||--o{ DISP_client_id : links_to
-    client_district_id }o--|| district_district_id : in_district
-    account_account_id ||--o{ disp_account_id : links_to
-    account_district_id }o--|| district_district_id : in_district
-    loan_account_id ||--|| account_account_id : on_account
-    order_account_id ||--|| account_account_id : on_account
-    trans_account_id ||--|| account_account_id : on_account
-    card_disp_id ||--|| disp_disp_id : for_role
+    CLIENT ||--o{ DISP : has
+    CLIENT }o--|| DISTRICT : lives_in
+    ACCOUNT ||--o{ DISP : has
+    ACCOUNT ||--o{ LOAN : owns
+    ACCOUNT ||--o{ ORDER : makes
+    ACCOUNT ||--o{ TRANS : makes
+    DISP ||--o{ CARD : owns
+    ACCOUNT }o--|| DISTRICT : located_in
 
 
     CLIENT {
@@ -89,3 +89,17 @@ erDiagram
         string account
     }
 ```
+
+# 🔗 Внешние ключи и связи между таблицами
+
+| Таблица.Поле (FK)       | ↔ Таблица.Поле (PK)         | Тип связи           | Описание                                  |
+|-------------------------|-----------------------------|---------------------|-------------------------------------------|
+| `client.district_id`    | `district.district_id`      | многие-к-одному     | Клиент относится к одному району          |
+| `account.district_id`   | `district.district_id`      | многие-к-одному     | Счёт зарегистрирован в одном районе       |
+| `disp.client_id`        | `client.client_id`          | многие-к-одному     | Пользователь счёта                        |
+| `disp.account_id`       | `account.account_id`        | многие-к-одному     | Привязка клиента к счёту                  |
+| `card.disp_id`          | `disp.disp_id`              | один-к-одному/многим| Карта выдана держателю счёта              |
+| `loan.account_id`       | `account.account_id`        | многие-к-одному     | Кредит привязан к счёту                   |
+| `order.account_id`      | `account.account_id`        | многие-к-одному     | Платёжное поручение с конкретного счёта   |
+| `trans.account_id`      | `account.account_id`        | многие-к-одному     | Транзакции по счёту                       |
+
