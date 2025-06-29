@@ -1,14 +1,15 @@
 ```mermaid
 erDiagram
 
-    CLIENT ||--o{ DISP : has
-    CLIENT }o--|| DISTRICT : lives_in
-    ACCOUNT ||--o{ DISP : has
-    ACCOUNT ||--o{ LOAN : owns
-    ACCOUNT ||--o{ ORDER : makes
-    ACCOUNT ||--o{ TRANS : makes
-    DISP ||--o{ CARD : owns
-    ACCOUNT }o--|| DISTRICT : located_in
+    client_client_id ||--o{ disp_client_id : links_to
+    client_district_id }o--|| district_district_id : in_district
+    account_account_id ||--o{ disp_account_id : links_to
+    account_district_id }o--|| district_district_id : in_district
+    loan_account_id ||--|| account_account_id : on_account
+    order_account_id ||--|| account_account_id : on_account
+    trans_account_id ||--|| account_account_id : on_account
+    card_disp_id ||--|| disp_disp_id : for_role
+
 
     CLIENT {
         int client_id PK
