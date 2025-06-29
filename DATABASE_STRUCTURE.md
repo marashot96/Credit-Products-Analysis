@@ -1,7 +1,7 @@
 ```mermaid
 erDiagram
 
-    client_client_id ||--o{ disp_client_id : links_to
+    CLIENT_client_id ||--o{ DISP_client_id : links_to
     client_district_id }o--|| district_district_id : in_district
     account_account_id ||--o{ disp_account_id : links_to
     account_district_id }o--|| district_district_id : in_district
