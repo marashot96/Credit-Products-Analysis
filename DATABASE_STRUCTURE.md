@@ -87,5 +87,4 @@ erDiagram
         string bank
         string account
     }
-</details>
 ```
