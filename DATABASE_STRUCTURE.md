@@ -19,7 +19,19 @@ erDiagram
     DISTRICT {
         int district_id PK
         string A2
-        ...
+        string A3
+        string A4
+        string A5
+        string A6
+        string A7
+        string A8
+        string A9
+        string A10
+        string A11
+        string A12
+        string A13
+        string A14
+        string A15
         string A16
     }
 
