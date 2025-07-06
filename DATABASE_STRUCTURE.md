@@ -67,7 +67,7 @@
 | amount    | float      | Сумма кредита                               |
 | duration  | int        | Срок кредита (месяцы)                       |
 | payments  | float      | Размер ежемесячных платежей                 |
-| status    | string     | Статус кредита (напр., active, closed)     |
+| status    | string     | Статус кредита (A, B, C, D)                 |
 
 ### order.csv
 
