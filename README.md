@@ -41,6 +41,7 @@ Credit-Products-Analysis/
 │   ├── basic_insights.sql
 │   └── loan_analysis.sql
 │
+├── DATABASE_STRUCTURE.md        # Структура данных
 └── README.md                    # Описание проекта
 ```
 
