@@ -32,14 +32,15 @@ Credit-Products-Analysis/
 │   └── README_data.md
 │
 ├── notebooks/                   # Jupyter-блокноты
+│   ├── Navigator.md             # Файл-навигатор по реализованным ноутбукам
 │   ├── 01_EDA.ipynb             # Исследовательский анализ данных
 │   ├── 02_Segmentation.ipynb    # Сегментация клиентов
 │   ├── 03_Default_Predict.ipynb # Модель предсказания дефолта
-│   └── 04_Report.ipynb          # Итоговая визуализация и выводы
+│   ├── 04_Report.ipynb          # Итоговая визуализация и выводы
+│   └── 05_AB_Test.ipynb         # Реализация A/B-теста
 │
 ├── sql/                         # SQL-запросы для анализа
-│   ├── basic_insights.sql
-│   └── loan_analysis.sql
+│   └── queries.md               # Файл со всеми запросами
 │
 ├── DATABASE_STRUCTURE.md        # Структура данных
 └── README.md                    # Описание проекта
